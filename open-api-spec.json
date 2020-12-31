@@ -1,0 +1,1140 @@
+{
+    "components": {
+        "schemas": {
+            "DateRange": {
+                "additionalProperties": false,
+                "properties": {
+                    "end": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "start": {
+                        "format": "date-time",
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "Employee": {
+                "additionalProperties": false,
+                "properties": {
+                    "areaCode": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "birthDate": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "city": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "contractEndDate": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "country": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "createDate": {
+                        "format": "date-time",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "email": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "emergencyContactAreaCode": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "emergencyContactName": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "emergencyContactPhoneNumber": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "firstName": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "id": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "lastName": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "middleName": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "phoneNumber": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "positiontitle": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "postCode": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "startDate": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "state": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "status": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "streetAddress": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "streetAddressLine2": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "supervisor": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "updateDate": {
+                        "format": "date-time",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "usualDaysOfEmployment": {
+                        "items": {
+                            "type": "string"
+                        },
+                        "nullable": true,
+                        "type": "array"
+                    }
+                },
+                "type": "object"
+            },
+            "ExpenseReport": {
+                "additionalProperties": false,
+                "properties": {
+                    "amount": {
+                        "format": "double",
+                        "type": "number"
+                    },
+                    "createDate": {
+                        "format": "date-time",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "description": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "employeeId": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "id": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "paymentMethod": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "purchaseDate": {
+                        "format": "date-time",
+                        "type": "string"
+                    },
+                    "updateDate": {
+                        "format": "date-time",
+                        "nullable": true,
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "LeaveRequest": {
+                "additionalProperties": false,
+                "properties": {
+                    "createDate": {
+                        "format": "date-time",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "dateRange": {
+                        "$ref": "#/components/schemas/DateRange"
+                    },
+                    "employeeId": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "id": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "isApproved": {
+                        "type": "boolean"
+                    },
+                    "reason": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "updateDate": {
+                        "format": "date-time",
+                        "nullable": true,
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "ProblemDetails": {
+                "additionalProperties": {},
+                "properties": {
+                    "detail": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "instance": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "status": {
+                        "format": "int32",
+                        "nullable": true,
+                        "type": "integer"
+                    },
+                    "title": {
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "type": {
+                        "nullable": true,
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            },
+            "TimeSheet": {
+                "additionalProperties": false,
+                "properties": {
+                    "createDate": {
+                        "format": "date-time",
+                        "nullable": true,
+                        "type": "string"
+                    },
+                    "dateRanges": {
+                        "items": {
+                            "$ref": "#/components/schemas/DateRange"
+                        },
+                        "nullable": true,
+                        "type": "array"
+                    },
+                    "employeeId": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "id": {
+                        "format": "int32",
+                        "type": "integer"
+                    },
+                    "updateDate": {
+                        "format": "date-time",
+                        "nullable": true,
+                        "type": "string"
+                    }
+                },
+                "type": "object"
+            }
+        }
+    },
+    "info": {
+        "title": "Employee Self Service API",
+        "version": "v1"
+    },
+    "openapi": "3.0.1",
+    "paths": {
+        "/Employee": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/Employee"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/Employee"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/Employee"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Gets employees.",
+                "tags": ["Employee"]
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Employee"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Employee"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Employee"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "Creates an employee.",
+                "tags": ["Employee"]
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Employee"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Employee"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/Employee"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "summary": "Updates an employee.",
+                "tags": ["Employee"]
+            }
+        },
+        "/Employee/{id}": {
+            "delete": {
+                "parameters": [],
+                "responses": {},
+                "summary": "Deletes an employee.",
+                "tags": []
+            },
+            "get": {
+                "parameters": [],
+                "responses": {},
+                "summary": "Finds an employee by Id.",
+                "tags": []
+            }
+        },
+        "/ExpenseReport": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/ExpenseReport"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/ExpenseReport"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/ExpenseReport"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Gets employees.",
+                "tags": ["ExpenseReport"]
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExpenseReport"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExpenseReport"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExpenseReport"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "Creates an employee.",
+                "tags": ["ExpenseReport"]
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExpenseReport"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExpenseReport"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/ExpenseReport"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "summary": "Updates an employee.",
+                "tags": ["ExpenseReport"]
+            }
+        },
+        "/ExpenseReport/{id}": {
+            "delete": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "Deletes an employee.",
+                "tags": ["ExpenseReport"]
+            },
+            "get": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/ExpenseReport"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/ExpenseReport"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/ExpenseReport"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "summary": "Finds an employee by Id.",
+                "tags": ["ExpenseReport"]
+            }
+        },
+        "/LeaveRequest": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/LeaveRequest"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/LeaveRequest"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/LeaveRequest"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Gets employees.",
+                "tags": ["LeaveRequest"]
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LeaveRequest"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LeaveRequest"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LeaveRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "Creates an employee.",
+                "tags": ["LeaveRequest"]
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LeaveRequest"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LeaveRequest"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/LeaveRequest"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "summary": "Updates an employee.",
+                "tags": ["LeaveRequest"]
+            }
+        },
+        "/LeaveRequest/{id}": {
+            "delete": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "Deletes an employee.",
+                "tags": ["LeaveRequest"]
+            },
+            "get": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/LeaveRequest"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/LeaveRequest"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/LeaveRequest"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "summary": "Finds an employee by Id.",
+                "tags": ["LeaveRequest"]
+            }
+        },
+        "/TimeSheet": {
+            "get": {
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/TimeSheet"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/TimeSheet"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/TimeSheet"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    }
+                },
+                "summary": "Gets employees.",
+                "tags": ["TimeSheet"]
+            },
+            "post": {
+                "requestBody": {
+                    "content": {
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TimeSheet"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TimeSheet"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TimeSheet"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "201": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "Creates an employee.",
+                "tags": ["TimeSheet"]
+            },
+            "put": {
+                "requestBody": {
+                    "content": {
+                        "application/*+json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TimeSheet"
+                            }
+                        },
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TimeSheet"
+                            }
+                        },
+                        "text/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/TimeSheet"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "summary": "Updates an employee.",
+                "tags": ["TimeSheet"]
+            }
+        },
+        "/TimeSheet/{id}": {
+            "delete": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Success"
+                    }
+                },
+                "summary": "Deletes an employee.",
+                "tags": ["TimeSheet"]
+            },
+            "get": {
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "schema": {
+                            "format": "int32",
+                            "type": "integer"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/TimeSheet"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/TimeSheet"
+                                    },
+                                    "type": "array"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "items": {
+                                        "$ref": "#/components/schemas/TimeSheet"
+                                    },
+                                    "type": "array"
+                                }
+                            }
+                        },
+                        "description": "Success"
+                    },
+                    "400": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Bad Request"
+                    },
+                    "404": {
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            },
+                            "text/plain": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/ProblemDetails"
+                                }
+                            }
+                        },
+                        "description": "Not Found"
+                    }
+                },
+                "summary": "Finds an employee by Id.",
+                "tags": ["TimeSheet"]
+            }
+        }
+    }
+}
